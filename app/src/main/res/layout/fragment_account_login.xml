@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请登录账号，享受车载娱乐服务！"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/et_username"
+        android:layout_marginTop="16sp"
+        />
+
+    <TextView
+        android:layout_marginRight="8sp"
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/et_password"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_password"
+        android:text="密码"
+        />
+
+    <TextView
+        android:layout_marginRight="8sp"
+        android:id="@+id/tv_lable_usrname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/et_username"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_username"
+        android:text="用户名"
+        />
+
+    <EditText
+        android:layout_marginLeft="128sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tips"
+        android:id="@+id/et_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:layout_marginTop="16sp"
+        android:id="@+id/et_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_username"
+        app:layout_constraintLeft_toLeftOf="@id/et_username"
+        app:layout_constraintRight_toRightOf="@+id/et_username"
+        />
+
+    <ImageView
+        app:layout_constraintDimensionRatio="H,1:1"
+        android:layout_marginLeft="36dp"
+        android:id="@+id/iv_qrcode"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toRightOf="@id/et_username"
+        app:layout_constraintTop_toTopOf="@id/et_username"
+        app:layout_constraintBottom_toBottomOf="@+id/et_password"
+        />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_qrcode"
+        app:layout_constraintLeft_toLeftOf="@id/iv_qrcode"
+        app:layout_constraintRight_toRightOf="@+id/iv_qrcode"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请用(手机APP名称)"
+        />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintLeft_toLeftOf="@id/iv_qrcode"
+        app:layout_constraintRight_toRightOf="@+id/iv_qrcode"
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="扫描二维码登录"
+        />
+
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="登录"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/bt_register"
+        app:layout_constraintLeft_toLeftOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    <Button
+        app:layout_constraintLeft_toRightOf="@+id/bt_login"
+        android:id="@+id/bt_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintRight_toRightOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        android:text="注册"
+        />
+
+</android.support.constraint.ConstraintLayout>

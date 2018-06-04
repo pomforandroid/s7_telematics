@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/radio_group_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@android:color/white"
+        >
+        <RadioButton
+            android:id="@+id/radio_button_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账户信息"
+            android:drawableLeft="@drawable/tab_menu_account"
+            style="@style/RadioGroupButtonStyle"
+            />
+        <RadioButton
+            android:id="@+id/radio_button_authority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的权限"
+            android:drawableLeft="@drawable/tab_menu_account"
+            style="@style/RadioGroupButtonStyle"
+            />
+        <RadioButton
+            android:id="@+id/radio_button_carimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车辆信息"
+            android:drawableLeft="@drawable/tab_menu_account"
+            style="@style/RadioGroupButtonStyle"
+            />
+        <RadioButton
+            android:id="@+id/radio_button_flow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="流量管理"
+            android:drawableLeft="@drawable/tab_menu_account"
+            style="@style/RadioGroupButtonStyle"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_button_package"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="套餐管理"
+            android:drawableLeft="@drawable/tab_menu_account"
+            style="@style/RadioGroupButtonStyle"
+            />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/radio_group_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"></FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
